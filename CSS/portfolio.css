@@ -3,14 +3,145 @@
     margin: 0;
 }
 
+@font-face {
+    font-family: "SofiaRegular";
+    src: url("../fonts/SofiaProRegular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "SketchOpen";
+    src: url("../fonts/KGSecondChancesSketch.ttf") format("truetype");
+}
+
+body {
+  background-color: #FEDCC8;
+  overflow-x: hidden;
+}
+
+.wolken {
+  margin-top: 8em;
+}
+
+.divh1 {
+  width: 100%;
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  position: absolute;
+}
+
+h1 {
+  text-align: center;
+  color: #2D112B;
+  font-family: SketchOpen;
+  font-size: 3em;
+  margin-top: 18vh;
+}
+
+p {
+  margin-top: 26vh;
+  position: absolute;
+  font-family: SofiaRegular;
+}
+
 /* layout */
 .wrapper {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
   height: 100vh;
   width: 100vw;
+  perspective: 8px;
+  perspective-origin: 0%;
+  overflow-y: scroll;
+  overflow-x: hidden;
 }
+
+img {
+  position: absolute;
+  left: 0;
+  width: 3000px;
+  margin-left: -650px;
+}
+
+
+
+.parallax__layer__0 img {
+  margin-top: 23em;
+
+  transform-origin: 0;
+  transform: translateZ(-17px) scale(2.33);
+}
+
+.parallax__layer__1 img {
+  margin-top: 19em;
+
+  transform-origin: 0;
+  transform: translateZ(-14.5px) scale(2.14);
+}
+
+.parallax__layer__2 img {
+  margin-top: 15em;
+
+  transform-origin: 0;
+  transform: translateZ(-12px) scale(1.95);
+}
+
+.parallax__layer__3 img {
+  margin-top: 12em;
+
+  transform-origin: 0;
+  transform: translateZ(-9.5px) scale(1.76);
+}
+
+.parallax__layer__4 img {
+  margin-top: 8.5em;
+
+  transform-origin: 0;
+  transform: translateZ(-7px) scale(1.57);
+}
+
+.parallax__layer__5 img {
+  margin-top: 4em;
+
+  transform-origin: 0;
+  transform: translateZ(-4.5px) scale(1.37);
+}
+
+.parallax__layer__6 img {
+  transform-origin: 0;
+  transform: translateZ(-2px) scale(1.19);
+}
+
+.parallax__cover{
+  background: #2D112B;
+  display: block;
+  position: absolute;
+  top: 95%;
+  left: 0;
+  right: 0;
+  height: 2000px;
+  z-index: 2;
+
+  margin-top: 70vh;
+
+  transform-origin: 0;
+  transform: translateZ(-2px) scale(1.5);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Parallax Styles */
 .parallax-container {
@@ -41,6 +172,8 @@
   margin-top: auto;
   margin-bottom: -55vh;
 
+
+
   transform-origin: 0;
   transform: translateZ(6px) scale(0.3);
 
@@ -51,4 +184,11 @@
 
 .foreground img {
   width: 20vw;
+}
+
+
+.purpleBG {
+  height: 100vh;
+  width: 100vw;
+  background-color: #2D112B;
 }
